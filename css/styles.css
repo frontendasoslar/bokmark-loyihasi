@@ -1,3 +1,35 @@
+/* Fonts */
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Medium.woff2") format("woff2"),
+      url("../fonts/Rubik-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Regular.woff2") format("woff2"),
+      url("../fonts/Rubik-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+:root {
+  --blue: #5267df;
+  --red: #FA5959;
+  --text-color: #242A45;
+  --gray: #9194A2;
+  --white: #fff;
+  --font-family: "Rubik","Arial", sans-serif;
+}
+
+
 /* GLOBAL STYLES */
 html {
   box-sizing: border-box;
@@ -17,15 +49,13 @@ body {
   height: 100%;
   flex-direction: column;
   background-color: #fff;
-  color: #000;
+  color: var(--text-color);
   padding: 0;
   margin: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: "Rubik","Arial", sans-serif;
   font-weight: 400;
-  background-color: #222;
 }
 
 * :focus {
@@ -79,9 +109,9 @@ select:-webkit-autofill:focus {
 
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1140px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -95,6 +125,52 @@ select:-webkit-autofill:focus {
   flex-direction: column;
 }
 
+.button {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+  padding: 10px 24px;
+  background-color: var(--blue);
+  transition: color 0.3s ease, border 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  background-color: var(--white);
+}
+
+.button-firefox {
+  background-color: #f7f7f7;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.button-firefox:hover {
+  background-color: var(--white);
+  border: 2px solid var(--text-color);
+}
+
+.header-button {
+  text-transform: capitalize;
+  line-height: 17px;
+  padding: 12px 32px 11px 34px;
+  background-color: var();
+  background-color: var(--red);
+  transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+.header-button:hover {
+  color: var(--red);
+  border: 2px solid var(--red);
+  background-color: var(--white);
+}
+
+.extension-button {
+  padding-left: 35px;
+  padding-right: 35px;
+}
 
 
 @media
