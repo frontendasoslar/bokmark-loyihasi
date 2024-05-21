@@ -2,7 +2,7 @@
 @font-face {
   font-family: "Rubik";
   src: url("../fonts/Rubik-Medium.woff2") format("woff2"),
-      url("../fonts/Rubik-Medium.woff") format("woff");
+  url("../fonts/Rubik-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -11,7 +11,7 @@
 @font-face {
   font-family: "Rubik";
   src: url("../fonts/Rubik-Regular.woff2") format("woff2"),
-      url("../fonts/Rubik-Regular.woff") format("woff");
+  url("../fonts/Rubik-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -61,8 +61,8 @@ body {
 }
 
 /* * :focus {
- outline: 2px dashed #1E90FF;
- outline-offset: 2px;
+  outline: 2px dashed #1E90FF;
+  outline-offset: 2px;
 } */
 
 
@@ -128,15 +128,19 @@ select:-webkit-autofill:focus {
 }
 
 .button {
+  display: inline-block;
+  cursor: pointer;
   color: var(--white);
   font-weight: 500;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 28px;
   letter-spacing: 0.25px;
   padding: 10px 24px;
   background-color: var(--blue);
   border-radius: 5px;
   text-decoration: none;
+  border: 2px solid transparent;
+  white-space: nowrap;
 }
 
 .button:hover {
@@ -150,11 +154,16 @@ select:-webkit-autofill:focus {
 }
 
 .header-button {
+  display: inline-block;
+  cursor: pointer;
   text-transform: capitalize;
   line-height: 17px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
   padding: 12px 32px 11px 34px;
   background-color: var();
   background-color: var(--red);
+  border: 2px solid transparent;
 }
 
 .header-button:hover {
@@ -168,6 +177,8 @@ select:-webkit-autofill:focus {
 }
 
 .button-firefox {
+  display: inline-block;
+  cursor: pointer;
   background-color: #f7f7f7;
 }
 
@@ -182,6 +193,8 @@ select:-webkit-autofill:focus {
 
 
 .extension-button {
+  display: inline-block;
+  cursor: pointer;
   padding-left: 35px;
   padding-right: 35px;
 }
@@ -189,16 +202,15 @@ select:-webkit-autofill:focus {
 
 
 /* SITE-HEADER */
-
-.site-header__container {
-  display: flex;
-  align-items: center;
+.site-header {
   padding-top: 48px;
   padding-bottom: 48px;
 }
+.site-header__container {
+  display: flex;
+  align-items: center;
+}
 .site-header__logo {
-  padding: 0;
-  margin: 0;
   margin-right: 502px;
 }
 .logo {
@@ -210,17 +222,13 @@ select:-webkit-autofill:focus {
 
 
 .site-header__logo-img {
-  padding: 0;
-  margin: 0;
   width: 149px;
   height: 25px;
 }
 .logo__img {
-  padding: 0;
-  margin: 0;
   flex-shrink: 0;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .logo__img:hover {
@@ -233,7 +241,7 @@ select:-webkit-autofill:focus {
 .sitenav {
   padding: 0;
   margin: 0;
- margin-right: 48px;
+  margin-right: 48px;
 }
 .sitenav__list {
   padding: 0;
@@ -251,14 +259,16 @@ select:-webkit-autofill:focus {
 }
 
 .sitenav__item:not(:last-child) {
-  margin-right: 44px;
+  margin-right: 48px;
 }
 
 .sitenav__link {
   padding: 0;
   margin: 0;
+  display: block;
   text-decoration: none;
   color: var(--text-color);
+  text-transform: uppercase;
 }
 
 .sitenav__link:hover {
