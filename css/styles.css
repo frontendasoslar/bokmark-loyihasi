@@ -19,11 +19,13 @@
 
 
 
-
+/* CUSTOM PROPS */
 :root {
   --blue: #5267df;
   --red: #FA5959;
   --text-color: #242A45;
+  --text-color-75: rgba(36, 42, 69, 0.75);
+  --text-color-50: rgba(36, 42, 69, 0.5);
   --gray: #9194A2;
   --white: #fff;
   --font-family: "Rubik","Arial", sans-serif;
@@ -58,10 +60,10 @@ body {
   font-weight: 400;
 }
 
-* :focus {
+/* * :focus {
  outline: 2px dashed #1E90FF;
  outline-offset: 2px;
-}
+} */
 
 
 
@@ -133,7 +135,8 @@ select:-webkit-autofill:focus {
   letter-spacing: 0.25px;
   padding: 10px 24px;
   background-color: var(--blue);
-  transition: color 0.3s ease, border 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 .button:hover {
@@ -142,14 +145,8 @@ select:-webkit-autofill:focus {
   background-color: var(--white);
 }
 
-.button-firefox {
-  background-color: #f7f7f7;
-  transition: background-color 0.3s ease, border 0.3s ease;
-}
-
-.button-firefox:hover {
-  background-color: var(--white);
-  border: 2px solid var(--text-color);
+.button:active {
+  opacity: 0.6;
 }
 
 .header-button {
@@ -158,7 +155,6 @@ select:-webkit-autofill:focus {
   padding: 12px 32px 11px 34px;
   background-color: var();
   background-color: var(--red);
-  transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
 }
 
 .header-button:hover {
@@ -167,10 +163,113 @@ select:-webkit-autofill:focus {
   background-color: var(--white);
 }
 
+.header-button:active {
+  opacity: 0.6;
+}
+
+.button-firefox {
+  background-color: #f7f7f7;
+}
+
+.button-firefox:hover {
+  background-color: var(--white);
+  border: 2px solid var(--text-color);
+}
+
+.button-firefox:active {
+  opacity: 0.6;
+}
+
+
 .extension-button {
   padding-left: 35px;
   padding-right: 35px;
 }
+
+
+
+/* SITE-HEADER */
+
+.site-header__container {
+  display: flex;
+  align-items: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.site-header__logo {
+  padding: 0;
+  margin: 0;
+  margin-right: 502px;
+}
+.logo {
+  width: 149px;
+  height: 25px;
+  flex-shrink: 0;
+  display: block;
+}
+
+
+.site-header__logo-img {
+  padding: 0;
+  margin: 0;
+  width: 149px;
+  height: 25px;
+}
+.logo__img {
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  display: block;
+  object-fit: cover;
+}
+
+.logo__img:hover {
+  opacity: 0.8;
+}
+
+.logo__img:active {
+  opacity: 0.6;
+}
+.sitenav {
+  padding: 0;
+  margin: 0;
+ margin-right: 48px;
+}
+.sitenav__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.sitenav__item {
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 1.5px;
+}
+
+.sitenav__item:not(:last-child) {
+  margin-right: 44px;
+}
+
+.sitenav__link {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.sitenav__link:hover {
+  color: var(--red);
+}
+
+.sitenav__link:active {
+  opacity: 0.6;
+}
+
+
 
 
 @media
