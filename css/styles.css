@@ -50,7 +50,7 @@ body {
   display: flex;
   height: 100%;
   flex-direction: column;
-  background-color: #fff;
+  background-color: var(--white);
   color: var(--text-color);
   padding: 0;
   margin: 0;
@@ -135,12 +135,13 @@ select:-webkit-autofill:focus {
   font-size: 14px;
   line-height: 28px;
   letter-spacing: 0.25px;
-  padding: 10px 24px;
+  padding: 8px 22px;
   background-color: var(--blue);
   border-radius: 5px;
   text-decoration: none;
   border: 2px solid transparent;
   white-space: nowrap;
+  overflow-x: hidden;
 }
 
 .button:hover {
@@ -160,8 +161,7 @@ select:-webkit-autofill:focus {
   line-height: 17px;
   font-size: 13px;
   letter-spacing: 1.5px;
-  padding: 12px 32px 11px 34px;
-  background-color: var();
+  padding: 10px 30px 9px 32px;
   background-color: var(--red);
   border: 2px solid transparent;
 }
@@ -180,9 +180,12 @@ select:-webkit-autofill:focus {
   display: inline-block;
   cursor: pointer;
   background-color: #f7f7f7;
+  color: var(--text-color);
+  margin-left: 16px;
 }
 
 .button-firefox:hover {
+  color: var(--text-color);
   background-color: var(--white);
   border: 2px solid var(--text-color);
 }
@@ -280,6 +283,67 @@ select:-webkit-autofill:focus {
 }
 
 
+/* HERO */
+.hero {
+  padding-top: 67px;
+  padding-bottom: 105px;
+  background-image: url("../img/hero-bacground-img.svg");
+  background-repeat: no-repeat;
+  background-position: calc(50% + 705px) 200px;
+}
+
+.site-hero__wrapper {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+}
+.site-hero__info {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+}
+.hero-info--wrapper {
+  padding: 0;
+  padding-top: 70px;
+  margin: 0;
+  margin-right: 65px;
+  flex-shrink: 0;
+}
+.hero-info--wrapper__heading {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -0.15px;
+  font-weight: 500;
+}
+.hero-info--wrapper__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 32px;
+  color: var(--text-color-50);
+}
+
+
+.hero-img {
+  width: 578px;
+  height: 385px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.hero-img::before {
+  content: 0;
+  background-image: url("../img/hero-bacground-img.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
 
 
 @media
