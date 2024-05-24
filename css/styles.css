@@ -246,6 +246,7 @@ select:-webkit-autofill:focus {
   display: flex;
   justify-content: center;
   list-style: none;
+  margin-bottom: 72px;
 }
 
 .tabs__item {
@@ -420,7 +421,71 @@ select:-webkit-autofill:focus {
 
 /* INDEX-FEAUTURE-TAB LINKS */
 
+.tab-panel {
+  display: none;
+  padding-bottom: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../img/hero-bacground-img.svg");
+  background-repeat: no-repeat;
+  background-position: calc(50% - 590px) 90px;
+}
 
+.tab-panel__active {
+  display: block;
+}
+.simple-tab--panel {
+}
+.tab-panel__wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.tab-panel__img {
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.simple-tab--panel__img {
+  margin-right: 125px;
+}
+.tab-panel__info {
+  padding: 0;
+  padding-top: 57px;
+  margin: 0;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 445px;
+  text-align: justify;
+}
+.tab-panel__heading {
+  padding: 0;
+  margin: 0;
+  font-size: 32px;
+  line-height: 52px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  color: var(--text-color);
+  margin-bottom: 16px;
+}
+.tab-panel__title {
+  padding: 0;
+  margin: 0;
+  color: var(--text-color-50);
+  margin-bottom: 32px;
+}
+
+.speedy-tab--panel {
+}
+.speedy-tab--panel__img {
+  margin-right: 118px;
+}
+.easy-tab--panel {
+}
+.easy-tab--panel__img {
+  margin-right: 146px;
+}
 
 
 @media
