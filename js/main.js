@@ -7,13 +7,17 @@ elsTablink.forEach(function(elTablink) {//elsTablinklarni har birini funksiya ki
     evt.preventDefault();//agar click hodisa ro'y berganda yani linklar bosilganda linklarni ishlashdan to'xtatayapmiz bun link bosilganda sahifa ko'tarilib ketmasligi uchun
 
 
-    //Tab link bosilganda tab itemlardan actic clasini olib tashlaymiz
+    //Ushbu kodni funktsiyaga boglab qo'yamiz
+    function DeactivadetTabItems() {
+      //Tab link bosilganda tab itemlardan actic clasini olib tashlaymiz
     elsTabsitem.forEach(function(elTabsitem) {//Tab itemlarni har birini elTabsitem noi bilan nomlab olayapmiz
       elTabsitem.classList.remove('tabs__item--active')//link bosilganda tabs itemdan activ klasini olib tashlayapmiz
     })
+    }
 
+    //DeactivadetTabItems() kiritgan funktsiyamiz ichidagi kodni yozmaddan quyidagi buyruqni berishimiz kifoya
+    DeactivadetTabItems()
     //Qaysi tab link bosilsa o'shaning otasi tab itemga activ klasini qo'shamiz
     elTablink.parentElement.classList.add('tabs__item--active')
-    console.log(elTablink.href.split('#')[1]);
   })
 })
